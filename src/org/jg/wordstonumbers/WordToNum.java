@@ -8,17 +8,12 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-
 public class WordToNum {
     final static List<String> allowedStrings = Arrays.asList("and", "zero", "one", "two", "three", "four", "five",
             "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
             "seventeen", "eighteen", "nineteen", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty",
             "ninety", "hundred", "thousand", "million", "billion", "trillion");
-
-
-
     public static String convertTextualNumbersInDocument(String inputText) {
-
             // splits text into words and deals with hyphenated numbers. Use linked
             // list due to manipulation during processing
             List<String> words = new LinkedList<String>(cleanAndTokenizeText(inputText));
